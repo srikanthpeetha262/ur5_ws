@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<launch>
+  
+	<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find ur_description)/urdf/ur5_robot.urdf.xacro'" />
+
+	<!-- Combine joint values -->
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+	<!-- show in Rviz -->
+	<node name="rviz" pkg="rviz" type="rviz"/>
+
+	<!-- Send joint values -->
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+		<param name="use_gui" value="True"/>
+	</node>
+
+<!--
+  <node pkg="tf" type="static_transform_publisher" name="world_broadcaster" args="0 0 0 0 0 0 map world 100" />
+  
+  <node pkg="tf" type="static_transform_publisher" name="boxEnv_broadcaster" args="0 0 0.75 0 0 0 map boxEnv 100" />
+
+  <node pkg="tf" type="static_transform_publisher" name="base_link_broadcaster" args="2 2 2 1 1 1 1 map base_link 100" />
+
+  <node pkg="tf" type="static_transform_publisher" name="base_broadcaster" args="2 2 2 1 1 1 1 map base 100" />
+  
+  <node pkg="tf" type="static_transform_publisher" name="ee_link_broadcaster" args="2 2 2 1 1 1 1 map ee_link 100" />
+    
+  <node pkg="tf" type="static_transform_publisher" name="forearm_link_broadcaster" args="2 2 2 1 1 1 1 map forearm_link 100" />
+
+  <node pkg="tf" type="static_transform_publisher" name="shoulder_link_broadcaster" args="2 2 2 1 1 1 1 map shoulder_link 100" />
+  
+  <node pkg="tf" type="static_transform_publisher" name="tool0_broadcaster" args="2 2 2 1 1 1 1 map tool0 100" />
+  
+  <node pkg="tf" type="static_transform_publisher" name="upper_arm_link_broadcaster" args="2 2 2 1 1 1 1 map upper_arm_link 100" />
+
+  <node pkg="tf" type="static_transform_publisher" name="wrist_1_link_broadcaster" args="2 2 2 1 1 1 1 map wrist_1_link 100" />
+
+  <node pkg="tf" type="static_transform_publisher" name="wrist_2_link_broadcaster" args="2 2 2 1 1 1 1 map wrist_2_link 100" />
+
+  <node pkg="tf" type="static_transform_publisher" name="wrist_3_link_broadcaster" args="2 2 2 1 1 1 1 map wrist_3_link 100" />
+-->
+</launch>
+
+
+

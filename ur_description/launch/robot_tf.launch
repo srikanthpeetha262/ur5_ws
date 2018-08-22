@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="tf_pub_node" pkg="ur_description" type="tf_pub.py" />
+  <node name="tf_sub_node" pkg="ur_description" type="tf_sub.py" />
+</launch>
+
+
+
