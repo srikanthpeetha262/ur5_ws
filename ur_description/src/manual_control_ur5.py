@@ -106,7 +106,7 @@ def move_group_python_interface_tutorial():
 	print "============"
 
 	pose_target = Pose()
-	'''
+
 	pose_target.position.x = 0.0751597997494
 	pose_target.position.y = 0.10915
 	pose_target.position.z = 0.482745886493
@@ -115,7 +115,7 @@ def move_group_python_interface_tutorial():
 	pose_target.orientation.z = 0.0
 	pose_target.orientation.w = 0.706825181102
 	group.set_pose_target(pose_target)
-	'''
+
 	'''
 	pose_target.position.x = rand_pose.pose.position.x
 	pose_target.position.y = rand_pose.pose.position.x
